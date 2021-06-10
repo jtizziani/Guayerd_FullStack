@@ -1,0 +1,34 @@
+codigo.txt
+levantamos los platos
+preguntamos si el plato esta limpio o sucio?
+mientras tengamos platos, preguntamos
+si esta sucio    
+   sacamos los restos de comida, luego 
+   lo sumergimos en agua con detergente, 
+   los limpiamos con una esponja 
+   los enjuagamos 
+   los secamos
+   ponemos en la alasena         
+sino 
+   lo ponemos en la alasena
+
+ingrese el nro de alumno : nro_alum 
+ingrese nota1 
+ingrese nota2
+
+sumo nota1 y nota2
+nota_promedio =suma / 2
+
+imprimo promedio
+
+
+ingrese el nro de alumno : nro_alum 
+ingrese el nro de notas "n"  a ingresar
+suma =0
+Mientras contador sea menor o igual de n
+        suma = suma + nota
+        n = n + 1
+nota promedio = suma/n
+
+imprimo" El alumno nro_alum tiene una nota promedio de: nota_promedio
+          
