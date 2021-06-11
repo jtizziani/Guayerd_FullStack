@@ -5,3 +5,8 @@ Ejercicios con cadenas de textos:
  
 */
 
+let cadena = prompt("ingrese un cadena de caracteres");
+let letra = prompt("ingrese letra a buscar");
+if (cadena.includes(letra)){
+    alert("La cadena contiene a la letra "+letra);
+} else alert("La cadena no contiene a la letra "+letra)   
