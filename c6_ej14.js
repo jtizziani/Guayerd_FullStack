@@ -7,11 +7,7 @@ H
 O
 L
 A
-15)	Solicitar al usuario que ingrese una lista de supermercado y al final mostrar todos 
-    los items separados por comas. 
-16)	Solicitar al usuario que ingrese números. Finalizar cuando ingrese un número múltiplo de 3. 
-    Mostrar todos los números ingresados.
- 
+
 
 */
 let nro = parseInt(prompt("Ingrese un valor"));
