@@ -41,61 +41,75 @@ el cliente llega a la caja y tenemos un menu de opciones
    - opcion5 - salir
          
 */
+// Valores con que hago las pruebas
+
 let c_cliente = 1;
 let c_saldo_banco = 100000;
 
+//
+
 let cliente  = parseInt(prompt("Ingreso Nro de Cliente"));
-let prod_cod = parseInt(prompt("Ingrese el codigo del "));
-let prod_des = prompt("Ingresa descripcion del producto");
-let prod_pre = parseFloat(prompt("Ingrese el precio del producto"));
+//let prod_cod = parseInt(prompt("Ingrese el codigo del producto "));
+//let prod_des = prompt("Ingresa descripcion del producto");
+//let prod_pre = parseFloat(prompt("Ingrese el precio del producto"));
+let prod_cod;
+let prod_des;
+let prod_pre;
 let cond = "s" // condicion de compra, sigue o termina?
 let monto_apag; //monto a pagar
 let suma_vta = 0; // sumo la compra
 let fp;  // forma de pago e, t
 let extraccion; // voy a gusradar la extraccion
-
+let pago;
 // en este bucle el cliente hace toda la compra
 
-while (c_cliente = cliente && cond == "s"){
-    suma_vta = suma_vta + prod_pre;
-    console.log("producto "+prod_des+" $ "+prod_pre+" saldo venta"+suma_vta)
-    cliente  = parseInt(prompt("Ingreso Nro de Cliente"));
-    prod_cod = parseInt(prompt("Ingrese el codigo del "));
+while (c_cliente = cliente && cond === "s"){
+    //cliente  = parseInt(prompt("Ingreso Nro de Cliente"));
+    prod_cod = parseInt(prompt("Ingrese el codigo del producto "));
     prod_des = prompt("Ingresa descripcion del producto");
     prod_pre = parseFloat(prompt("Ingrese el precio del producto"));
-    cond = perseint(prompt("Sigue comprando? S/N"))
+    suma_vta = suma_vta + prod_pre;
+    console.log("producto "+prod_des+" $ "+prod_pre+" saldo venta "+suma_vta);
+    cond = prompt("Sigue comprando? S/N")
 }
-alert("  ------  Menu Opciones -----\n - opcion1 - cobrar \n - opcion2 - Retirar dinero en caja \n - opcion3 - Ver balance \n - opcion4 - Ver montos de totales \n - opcion5 - salir")
+
+
+//alert("  ------  Menu Opciones -----\n - opcion1 - cobrar \n - opcion2 - Retirar dinero en caja \n - opcion3 - Ver balance \n - opcion4 - Ver montos de totales \n - opcion5 - salir")
+console.log("  ------  Menu Opciones -----\n - 1 - Cobrar \n - 2 - Retirar dinero en caja \n - 3 - Ver balance \n - 4 - Ver montos de totales \n - 5 - salir")
+alert("  ------  Menu Opciones -----\n - 1 - Cobrar \n - 2 - Retirar dinero en caja \n - 3 - Ver balance \n - 4 - Ver montos de totales \n - 5 - salir")
+
 let opcion =parseInt(prompt("Ingrese que operacion desea realizar ( 1, 2, 3, 4 o 5"));
 
 // en este bucle se encarga de realizar el pago de los productos selccionados en el bucle anterior
 
 while (opcion > 0 && opcion < 6){
     if (opcion == 1){
-        fp = prompt("ingrese forma de pago e - efectivo \n t - tarjeta")
-            while (fp =="e" || fp =="t"){
-                if (fp =="e"){
-                    if (suma_vta > 2000){
+        fp = prompt("ingrese forma de pago \n e - efectivo \n t - tarjeta")
+            while (fp === "e" || fp === "t"){
+                //let pago = parseInt(prompt("ingrese valor con que va a pagar"));    
+                if (fp === "e"){
+                    if (suma_vta > 2000 && suma_vta < 5000){
                         monto_apag = suma_vta - (suma_vta *0.05);
-                        console.log("Subtotal"+suma_vta+"\n Descuento"+(suma_vta*0.05)+"\n Total a pagar"+monto_apag)
-                    } else monto_apag = suma_vta;
-                    console.log("Subtotal"+suma_vta+"\n Descuento"+(suma_vta*0)+"\n Total a pagar"+monto_apag);
+                        console.log("Subtotal "+suma_vta+ "\n Descuento "+(suma_vta*0.05)+"\n Total a pagar "+monto_apag)
+                    } 
+                    if (suma_vta <= 2000){
+                        monto_apag = suma_vta;
+                        console.log("Subtotal "+suma_vta+"\n Descuento "+(suma_vta*0)+"\n Total a pagar "+monto_apag);
+                    }
                     let pago = parseInt(prompt("ingrese valor con que va a pagar"));
                     if (pago >= monto_apag){
-                        console.log("Su dinero es $ "+pago+" vuelto"+pago-monto_apag)
-                    }alert("Policia!!!!")
-                          
-                }
-
-                if (fp =="e" || fp =="t"){
-                    if (suma_vta > 5000){
-                        monto_apag = suma_vta - (suma_vta *0.10);
-                        console.log("Subtotal"+suma_vta+"\n Descuento"+(suma_vta*0.10)+"\n Total a pagar"+monto_apag)
-                    } else monto_apag = suma_vta;
-                    console.log("Subtotal"+suma_vta+"\n Descuento"+(suma_vta*0)+"\n Total a pagar"+monto_apag)
-                }
-                let pago = parseInt(prompt("ingrese valor con que va a pagar en efectivo"));
-                //let pagot = parseInt(prompt("ingrese monto que va a pagar con tarjeta"));
+                        console.log("Su dinero es $ "+pago+" vuelto "+pago-monto_apag);
+                    }else alert("Policia!!!!")
+                    }
+                    if (fp === "e" || fp === "t"){
+                        if (suma_vta > 5000){
+                            monto_apag = suma_vta - (suma_vta *0.10);
+                            console.log("Subtotal "+suma_vta+"\n Descuento "+(suma_vta*0.10)+"\n Total a pagar "+monto_apag)
+                        } else monto_apag = suma_vta;
+                        console.log("Subtotal "+suma_vta+"\n Descuento "+(suma_vta*0)+"\n Total a pagar "+monto_apag)
+                    }
+                    pago = parseInt(prompt("ingrese valor con que va a pagar en efectivo"));
+                    //let pagot = parseInt(prompt("ingrese monto que va a pagar con tarjeta"));
                     if (pago >= monto_apag){
                         console.log("Su dinero es $ "+pago+" vuelto"+pago-monto_apag)
                     }
