@@ -38,6 +38,7 @@ var an_cliente = parseInt(prompt("Ingrese Anio Nacimiento Cliente: "));
 var sb_cliente = parseFloat(prompt("Ingrese Sueldo Bruto Cliente: "));
 var fecha = new Date();
 var ano = fecha.getFullYear();
+var resultado;
 let plan;
 edad = ano - an_cliente;
 
@@ -64,8 +65,8 @@ if (id_cliente === cliente_id){
         console.log("El monto a pagar del plan segun su edad es de $ "+plan);
         alert("El monto a pagar del plan segun su edad es de $ "+plan);
         cal_apto(sb_cliente);
-        if (resultado>=plan){
-            alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Niños \n y puede acceder al plande salud por "+resutado);
+        if (resultado => plan){
+            alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Niños \n y puede acceder al plande salud por "+resultado);
         }else alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Niños \n y NO PUEDE acceder al plan de salud");
     }
     if (edad >17 & edad <30){
@@ -73,8 +74,8 @@ if (id_cliente === cliente_id){
         console.log("El monto a pagar del plan segun su edad es de $ "+plan);
         alert("El monto a pagar del plan segun su edad es de $ "+plan);  
         cal_apto(sb_cliente);
-        if (resultado>=plan){
-            alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Joven \n y puede acceder al plande salud por "+resutado);
+        if (resultado => plan){
+            alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Joven \n y puede acceder al plande salud por "+resultado);
         }else alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Joven \n y NO PUEDE acceder al plan de salud");
     }  
     if (edad >29 & edad <60){
@@ -82,8 +83,9 @@ if (id_cliente === cliente_id){
         console.log("El monto a pagar del plan segun su edad es de $ "+plan);
         alert("El monto a pagar del plan segun su edad es de $ "+plan); 
         cal_apto(sb_cliente);
-        if (resultado>=plan){
-            alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Adulto \n y puede acceder al plande salud por "+resutado);
+        alert("cincuentos"+resultado);
+        if (resultado => plan){
+            alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Adulto \n y puede acceder al plande salud por "+resultado);
         }else alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Adulto \n y NO PUEDE acceder al plan de salud");
     }
     if (edad >59){
@@ -91,8 +93,8 @@ if (id_cliente === cliente_id){
         console.log("El monto a pagar del plan segun su edad es de $ "+plan);
         alert("El monto a pagar del plan segun su edad es de $ "+plan);        
         cal_apto(sb_cliente);
-        if (resultado>=plan){
-        alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Adultos Mayores \n y puede acceder al plande salud por "+resutado);
-    }else alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Adultos Mayores \n y NO PUEDE acceder al plan de salud");
+        if (resultado => plan){
+            alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Adultos Mayores \n y puede acceder al plande salud por "+resultado);
+        }else alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Adultos Mayores \n y NO PUEDE acceder al plan de salud");
     }
 }    
