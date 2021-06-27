@@ -98,3 +98,12 @@ if (id_cliente === cliente_id){
         }else alert("El Sr/Sra : "+id_cliente+"\n su plan es Plan Adultos Mayores \n y NO PUEDE acceder al plan de salud");
     }
 }    
+
+
+/*
+NOTA : 
+* BONUS adicional: Agregar la chance de que pueda incluir a su grupo familiar. En este caso, debería 
+  agregar un dato más, cuántas personas hay en su familia. (Más adelante solicitaremos sus edades). 
+  El monto total del grupo familiar no debe superar el 30% del sueldo bruto.
+
+*/
